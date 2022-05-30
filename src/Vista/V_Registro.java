@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.C_Usuario;
+import Controlador.C_Cliente;
 import javax.swing.JOptionPane;
 
 /**
@@ -173,7 +173,7 @@ public class V_Registro extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Faltan campos por llenar");
 
         } else {
-            C_Usuario cu = new C_Usuario();
+            C_Cliente cu = new C_Cliente();
             cu.setIu_registro(this);
             cu.Registro();
         }

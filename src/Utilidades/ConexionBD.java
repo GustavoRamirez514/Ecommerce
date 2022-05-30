@@ -20,7 +20,7 @@ public class ConexionBD {
 
     String driver = "com.mysql.jdbc.Driver";
 
-    String connectString = "jdbc:mysql://localhost:3306/inmobiliaria";
+    String connectString = "jdbc:mysql://localhost:3306/e-commerce";
 
     String user = "root";
     String password = "";

@@ -5,10 +5,10 @@
  */
 package Vista;
 
-import Controlador.C_Usuario;
+import Controlador.C_Cliente;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import realestatecalicity.Principal;
+import ecommerce.Principal;
 
 /**
  *
@@ -70,7 +70,12 @@ public class V_Login extends javax.swing.JFrame {
 
         jLabel4.setText("Tipo: ");
 
-        L_TipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Agente", "Administrador" }));
+        L_TipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Administrador" }));
+        L_TipoUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                L_TipoUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +138,7 @@ public class V_Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Faltan campos por llenar");
 
         } else {
-            C_Usuario ConUs = new C_Usuario();
+            C_Cliente ConUs = new C_Cliente();
             ConUs.setIu_login(this); //SE LE ASIGNA AL CONTROLADOR SOBRE QUIEN LO ESCUCHA
             ConUs.IniciarSesion(); //Y LUEGO SE LLAMA EL METODO INISIAR SECCION DONDE CAPTURA LOS DATOS.
         }
@@ -147,6 +152,10 @@ public class V_Login extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_L_BtnRegistrarActionPerformed
+
+    private void L_TipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_L_TipoUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_L_TipoUsuarioActionPerformed
 
     public String getIdentificacion() {
         return L_Identificacion.getText();
