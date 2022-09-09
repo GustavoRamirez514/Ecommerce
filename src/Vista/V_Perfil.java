@@ -6,6 +6,8 @@
 package Vista;
 
 import Controlador.C_Cliente;
+import static Controlador.C_Cliente.UsuarioEnSesion;
+import Modelo.M_Cliente;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +25,7 @@ public class V_Perfil extends javax.swing.JFrame {
         initComponents();
         cu = new C_Cliente();
         cu.setIu_Perfil(this);
+
     }
 
     /**
@@ -192,22 +195,22 @@ public class V_Perfil extends javax.swing.JFrame {
         P_Apellido.setEditable(true);
         P_Contraseña.setEditable(true);
         P_Correo.setEditable(true);
-        
-        
-         try {
+        P_Telefono.setEditable(true);
+
+        try {
             if (JOptionPane.showConfirmDialog(null, "Se editara el registro, ¿desea continuar?") == JOptionPane.YES_OPTION) {
-                
+
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Seleccion un registro para editar");
         }
-        
+
     }//GEN-LAST:event_P_BtnEditarActionPerformed
 
     private void P_BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_P_BtnGuardarActionPerformed
         if (P_Nombre.getText().isEmpty() || P_Apellido.getText().isEmpty()
-                || P_Telefono.getText().isEmpty() || P_Correo.getText().isEmpty() 
-                || P_Contraseña.getText().isEmpty() ) {
+                || P_Telefono.getText().isEmpty() || P_Correo.getText().isEmpty()
+                || P_Contraseña.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Faltan campos por llenar");
 
         } else if (JOptionPane.showConfirmDialog(null, "Se actualizara el registro, ¿desea continuar?") == JOptionPane.YES_OPTION) {
@@ -271,8 +274,7 @@ public class V_Perfil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 
-
-public void setIdentificador(String i) {
+    public void setIdentificador(String i) {
         P_Identificador.setText(i);
     }
 
@@ -295,7 +297,6 @@ public void setIdentificador(String i) {
     public void setTelefono(String i) {
         P_Telefono.setText(i);
     }
-
 
     public void setContraseña(String i) {
         P_Contraseña.setText(i);
@@ -325,11 +326,13 @@ public void setIdentificador(String i) {
         return P_Telefono.getText();
     }
 
-
     public String getContraseña() {
         return P_Contraseña.getText();
 
     }
+
     
 
+   
+    
 }

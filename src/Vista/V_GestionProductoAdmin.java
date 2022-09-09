@@ -24,7 +24,7 @@ import javax.swing.table.TableRowSorter;
  */
 public class V_GestionProductoAdmin extends javax.swing.JPanel {
 
-    String Columna[] = {"ID", "Nombre", "Precio", "Cantidad Disponible", "Descripcion", "Estado"};
+    String Columna[] = {"ID", "Nombre", "Precio", "Descripcion", "Estado"};
     DefaultTableModel Modelo = new DefaultTableModel(Columna, 0);
     C_Productos cu;
     M_Productos bu;
@@ -107,7 +107,7 @@ public class V_GestionProductoAdmin extends javax.swing.JPanel {
 
         jLabel4.setText("Buscar:");
 
-        G_Filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Identificador", "Nombre", "Precio", "Cantidad Disponible", "Descripcion", "Estado", " " }));
+        G_Filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Identificador", "Nombre", "Precio", "Descripcion", "Estado", " " }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

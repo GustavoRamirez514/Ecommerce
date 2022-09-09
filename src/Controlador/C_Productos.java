@@ -36,7 +36,7 @@ public class C_Productos {
         M_Productos e = new M_Productos();
         e.setNombre(Iu_CrearProducto.getNombre());
         e.setPrecio(Iu_CrearProducto.getPrecio());
-        e.setCantidadDisponible(Iu_CrearProducto.getCantidadDisponible());
+        
         e.setDescripcion(Iu_CrearProducto.getDescripcion());
         e.setEstado(Iu_CrearProducto.getEstado());
 
@@ -54,7 +54,7 @@ public class C_Productos {
         
         for (M_Productos us : Productos) {
             
-            String datos[] = {String.valueOf(us.getIdentificador()),us.getNombre(),us.getPrecio(),us.getCantidadDisponible(), us.getDescripcion(), us.getEstado()};
+            String datos[] = {String.valueOf(us.getIdentificador()),us.getNombre(),us.getPrecio(), us.getDescripcion(), us.getEstado()};
             this.Iu_GestionProductoAdmin.AgregarFila(datos);
         }
 
@@ -67,7 +67,7 @@ public class C_Productos {
         
         for (M_Productos us : Productos) {
             
-            String datos[] = {String.valueOf(us.getIdentificador()),us.getNombre(),us.getPrecio(),us.getCantidadDisponible(), us.getDescripcion(), us.getEstado()};
+            String datos[] = {String.valueOf(us.getIdentificador()),us.getNombre(),us.getPrecio(), us.getDescripcion(), us.getEstado()};
             this.Iu_GestionProductoCliente.AgregarFila(datos);
         }
 
@@ -83,7 +83,6 @@ public class C_Productos {
         vu.setIdentificador(String.valueOf(u.getIdentificador()));
         vu.setNombre(u.getNombre());
         vu.setPrecio(u.getPrecio());
-        vu.setCantidadDisponible(u.getCantidadDisponible());
         vu.setDescripcion(u.getDescripcion());
         vu.setEstado(u.getEstado());
 
@@ -100,7 +99,6 @@ public class C_Productos {
         u.setIdentificador(Integer.parseInt(Iu_EditarProducto.getIdentificador()));
         u.setNombre(Iu_EditarProducto.getNombre());
         u.setPrecio(Iu_EditarProducto.getPrecio());
-        u.setCantidadDisponible(Iu_EditarProducto.getCantidadDisponible());
         u.setDescripcion(Iu_EditarProducto.getDescripcion());
         u.setEstado(Iu_EditarProducto.getEstado());
         u.ActualizarProducto();

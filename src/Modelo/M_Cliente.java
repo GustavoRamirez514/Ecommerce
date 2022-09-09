@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class M_Cliente {
 
     String Nombre, Apellido, Documento, Telefono, Correo, TipoDeUsuario, Contraseña;
-    int Identificador, TotalComprado;
+    int Identificador;
 
     public M_Cliente() {
     }
@@ -28,14 +28,6 @@ public class M_Cliente {
 
     public void setIdentificador(int Identificador) {
         this.Identificador = Identificador;
-    }
-
-    public int getTotalComprado() {
-        return TotalComprado;
-    }
-
-    public void setTotalComprado(int TotalComprado) {
-        this.TotalComprado = TotalComprado;
     }
     
     public String getNombre() {
@@ -109,7 +101,6 @@ public class M_Cliente {
                 u.setDocumento(rs.getString("Documento"));
                 u.setTelefono(rs.getString("Telefono"));
                 u.setCorreo(rs.getString("Correo"));
-                u.setTotalComprado(rs.getInt("TotalComprado"));
                 u.setTipoDeUsuario("TipoDeUsuario");
                 u.setContraseña(rs.getString("Contraseña"));
             }
@@ -120,7 +111,8 @@ public class M_Cliente {
 
         return u;
     }
-
+  
+    
     public boolean RegistrarUsuario() {
 
         ConexionBD C = new ConexionBD();
@@ -185,7 +177,6 @@ public class M_Cliente {
                 u.setDocumento(rs.getString("Documento"));
                 u.setTelefono(rs.getString("Telefono"));
                 u.setCorreo(rs.getString("Correo"));
-                u.setTotalComprado(rs.getInt("TotalComprado"));
                 u.setTipoDeUsuario(rs.getString("TipoDeUsuario"));
                 u.setContraseña(rs.getString("Contraseña"));
                 //agrego el usuario al arraylist

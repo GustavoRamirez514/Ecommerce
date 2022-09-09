@@ -141,7 +141,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ecommerce/Real Estate CaliCity V2 (1300 x 800 px).png"/>
+              <Image iconType="3" name="/ecommerce/E-Commerce CaliCity V2 (1300 x 800 px).png"/>
             </Property>
           </Properties>
         </Component>

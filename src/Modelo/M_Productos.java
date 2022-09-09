@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class M_Productos {
 
-    String Precio, Estado, Nombre, Descripcion, CantidadDisponible;
+    String Precio, Estado, Nombre, Descripcion;
     int Identificador;
 
     public M_Productos() {
@@ -29,14 +29,6 @@ public class M_Productos {
 
     public void setIdentificador(int Identificador2) {
         this.Identificador = Identificador2;
-    }
-
-    public String getCantidadDisponible() {
-        return CantidadDisponible;
-    }
-
-    public void setCantidadDisponible(String CantidadDisponible) {
-        this.CantidadDisponible = CantidadDisponible;
     }
 
     public String getPrecio() {
@@ -76,9 +68,9 @@ public class M_Productos {
         ConexionBD C = new ConexionBD();
         boolean Exito = false;
         M_Productos U = null;
-        String sql = "insert into productos(Nombre, Precio, CantidadDisponible, Descripcion, Estado)";
+        String sql = "insert into productos(Nombre, Precio, Descripcion, Estado)";
         sql += "values (";
-        sql += "'" + this.Nombre + "','" + this.Precio + "','" + this.CantidadDisponible + "','" + this.Descripcion + "','" + this.Estado + "')";
+        sql += "'" + this.Nombre + "','" + this.Precio + "','" + this.Descripcion + "','" + this.Estado + "')";
         try {
             Exito = C.ejecutarSql(sql);
             C.cerrarConexion();
@@ -100,7 +92,6 @@ public class M_Productos {
                 u.setIdentificador(rs.getInt("Identificador"));
                 u.setNombre(rs.getString("Nombre"));
                 u.setPrecio(rs.getString("Precio"));
-                u.setCantidadDisponible(rs.getString("CantidadDisponible"));
                 u.setDescripcion(rs.getString("Descripcion"));
                 u.setEstado(rs.getString("Estado"));
             }
@@ -128,7 +119,6 @@ public class M_Productos {
                 u.setIdentificador(rs.getInt("Identificador"));
                 u.setNombre(rs.getString("Nombre"));
                 u.setPrecio(rs.getString("Precio"));
-                u.setCantidadDisponible(rs.getString("CantidadDisponible"));
                 u.setDescripcion(rs.getString("Descripcion"));
                 u.setEstado(rs.getString("Estado"));
 
@@ -150,7 +140,6 @@ public class M_Productos {
         String sql = "update productos set ";
         sql += "Nombre = '" + this.Nombre + "', ";
         sql += "Precio = '" + this.Precio + "', ";
-        sql += "CantidadDisponible = '" + this.CantidadDisponible + "', ";
         sql += "Descripcion = '" + this.Descripcion + "', ";
         sql += "Estado = '" + this.Estado + "' ";
 

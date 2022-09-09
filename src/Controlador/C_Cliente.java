@@ -25,10 +25,11 @@ public class C_Cliente {
     V_Login Iu_login;
     V_Registro Iu_registro;
     V_GestionCliente Iu_GestionCliente;
-
+    V_Perfil Iu_Perfil;
+    
     public static boolean usuario = false;
 
-    V_Perfil Iu_Perfil;
+    
 
     public static M_Cliente UsuarioEnSesion;
 
@@ -36,6 +37,8 @@ public class C_Cliente {
 
     }
 
+    
+    
     public void IniciarSesion() {
         M_Cliente u = new M_Cliente();
         String ID = Iu_login.getIdentificacion();
@@ -108,7 +111,7 @@ public class C_Cliente {
         for (M_Cliente us : Usuarios) {
             //los envio a la tabla en la IU listado}
             String datos[] = {String.valueOf(us.getIdentificador()), us.getNombre(),
-                us.getApellido(), us.getDocumento(), us.getTelefono(), us.getCorreo(), String.valueOf(us.getTotalComprado())};
+                us.getApellido(), us.getDocumento(), us.getTelefono(), us.getCorreo()};
             this.Iu_GestionCliente.AgregarFila(datos);
         }
     }

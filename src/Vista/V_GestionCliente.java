@@ -22,7 +22,7 @@ import javax.swing.table.TableRowSorter;
  */
 public class V_GestionCliente extends javax.swing.JPanel {
 
-    String Columna[] = {"ID", "Nombre", "Apellido", "Documento", "Telefono", "Correo", "Total Comprado"};
+    String Columna[] = {"ID", "Nombre", "Apellido", "Documento", "Telefono", "Correo"};
     DefaultTableModel Modelo = new DefaultTableModel(Columna, 0);
     C_Cliente cu;
     M_Cliente bu;
@@ -92,7 +92,7 @@ public class V_GestionCliente extends javax.swing.JPanel {
 
         jLabel4.setText("Buscar:");
 
-        G_Filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Identificador", "Nombre", "Apellido", "Documento", "Telefono", "Correo", "Total comprado" }));
+        G_Filtro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Identificador", "Nombre", "Apellido", "Documento", "Telefono", "Correo" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
